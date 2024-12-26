@@ -10,15 +10,35 @@ const Statistics = ({ good, neutral, bad }) => {
   return (
     <div>
       <h2>Statistics</h2>
-      {(good + neutral + bad !== 0) ? (
-        <p>
-          <span>good {good}</span> <br />
-          <span>neutral {neutral}</span> <br />
-          <span>bad {bad}</span> <br />
-          <span>all {all}</span> <br />
-          <span>average {average}</span> <br />
-          <span>positive {positive} %</span>
-        </p>
+      {good + neutral + bad !== 0 ? (
+        <table>
+          <tbody>
+            <tr>
+              <td>good</td>
+              <td>{good}</td>
+            </tr>
+            <tr>
+              <td>neutral</td>
+              <td>{neutral}</td>
+            </tr>
+            <tr>
+              <td>bad</td>
+              <td>{bad}</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>{all}</td>
+            </tr>
+            <tr>
+              <td>average</td>
+              <td>{average}</td>
+            </tr>
+            <tr>
+              <td>positive</td>
+              <td>{positive} %</td>
+            </tr>
+          </tbody>
+        </table>
       ) : (
         <p>No feedback given</p>
       )}
